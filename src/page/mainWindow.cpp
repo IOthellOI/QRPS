@@ -30,9 +30,9 @@ page::MainWindow::MainWindow(QWidget * _parent):
 
 	setLayout(layout);
 
-	setWindowFlags(Qt::FramelessWindowHint);
-	setFixedWidth(1280);
-	setFixedHeight(800);
+	//setWindowFlags(Qt::FramelessWindowHint);
+	setFixedWidth(1440);
+	setFixedHeight(900);
 
 	connect(data->navigation,
 		SIGNAL(signalPageChanged(const QString &)),

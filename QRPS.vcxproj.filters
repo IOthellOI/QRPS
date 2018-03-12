@@ -94,6 +94,15 @@
     <Filter Include="Header Files\slider">
       <UniqueIdentifier>{7721820c-88e8-4b4e-93a1-bd2551798326}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\curve">
+      <UniqueIdentifier>{de001edf-1350-4efd-8892-a5dcd3473f5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\curve">
+      <UniqueIdentifier>{d6c6f29c-c64b-4d02-a40d-004602b27032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Reference File">
+      <UniqueIdentifier>{cfdfae17-3503-4b21-9cd5-b2da1a60649e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tmp\moc\moc_baseWidget.cpp">
@@ -180,6 +189,18 @@
     <ClCompile Include="src\slider\dataSlider.cpp">
       <Filter>Source Files\slider</Filter>
     </ClCompile>
+    <ClCompile Include="src\curve\dataCurve.cpp">
+      <Filter>Source Files\curve</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_dataCurve.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_qcustomplot.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inc\qcustomplot.cpp">
+      <Filter>Reference File</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\base\baseWidget.h">
@@ -217,6 +238,12 @@
     </CustomBuild>
     <CustomBuild Include="src\slider\dataSlider.h">
       <Filter>Header Files\slider</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\curve\dataCurve.h">
+      <Filter>Header Files\curve</Filter>
+    </CustomBuild>
+    <CustomBuild Include="inc\qcustomplot.h">
+      <Filter>Reference File</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
-  <component row="0" column="0" rowSpan="1" columnSpan="3">
-    <node name="" type="dataTree" path="./data/tree/tree.xml" row="0" column="0" rowSpan="1" columnSpan="1" />
+  <component row="0" column="0" rowSpan="1" columnSpan="1">
+    <node name="" type="dataCurve"  row="0" column="0" rowSpan="1" columnSpan="1" />
   </component>
-  <component row="0" column="3" rowSpan="1" columnSpan="1">
-    <node name="" type="tableGroup" path="./data/table/group.xml" row="0" column="0" rowSpan="1" columnSpan="1" />
+  <component row="0" column="1" rowSpan="1" columnSpan="1">
+    <node name="" type="dataCurve" row="0" column="0" rowSpan="1" columnSpan="1" />
+  </component>
+  <component row="1" column="0" rowSpan="1" columnSpan="1">
+    <node name="" type="dataCurve"  row="0" column="0" rowSpan="1" columnSpan="1" />
+  </component>
+  <component row="1" column="1" rowSpan="1" columnSpan="1">
+    <node name="" type="dataCurve" row="0" column="0" rowSpan="1" columnSpan="1" />
   </component>
 </page>

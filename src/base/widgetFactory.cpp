@@ -5,6 +5,7 @@
 #include "lineEdit.h"
 #include "textLabel.h"
 #include "dataSlider.h"
+#include "dataCurve.h"
 
 base::BaseWidget * base::WidgetFactory::create(const QString & _type)
 {
@@ -31,6 +32,10 @@ base::BaseWidget * base::WidgetFactory::create(const QString & _type)
 	else if (_type.toUpper() == "DATASLIDER")
 	{
 		return new slider::DataSlider;
+	}
+	else if (_type.toUpper() == "DATACURVE")
+	{
+		return new curve::DataCurve;
 	}
 	else
 	{
