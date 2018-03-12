@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation title="系统选择" alignment="0" >
+  <button name="" text="参数监视"  bind="parameterMonitor" row="0" column="0" columnSpan="1" rowSpan="1" width="150" height="90" checked="true"/>
+  <button name="" text="曲线显示"  bind="curveDisPlay"     row="1" column="0" columnSpan="1" rowSpan="1" width="150" height="90" checked="false"/>
+  <button name="" text="记录回放"  bind="recordReplay"     row="2" column="0" columnSpan="1" rowSpan="1" width="150" height="90" checked="false"/>
+</navigation>

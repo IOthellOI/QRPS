@@ -6,9 +6,7 @@
 /// @brief   TextLabel
 /// @version 1.0
 /// @author  Yang Wang
-/// @date    Feb 9,2018
-/// @web     http://iothelloi.sxl.cn/
-/// @git     https://github.com/iothelloi/
+/// @date    Mar 12,2018
 //////////////////////////////////////////////////
 #pragma once
 #ifndef TEXTLABEL_H
@@ -16,9 +14,9 @@
 
 #include "baseWidget.h"
 
-namespace ios
+namespace label
 {
-	class TextLabel : public BaseWidget
+	class TextLabel : public base::BaseWidget
 	{
 		Q_OBJECT
 	public:

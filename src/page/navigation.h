@@ -6,9 +6,7 @@
 /// @brief   Navigation
 /// @version 1.0
 /// @author  Yang Wang
-/// @date    Feb 12,2018
-/// @web     http://iothelloi.sxl.cn/
-/// @git     https://github.com/iothelloi/
+/// @date    Mar 12,2018
 //////////////////////////////////////////////////
 #pragma once
 #ifndef NAVIGATION_H
@@ -16,9 +14,9 @@
 
 #include "baseWidget.h"
 
-namespace ios
+namespace page
 {
-	class Navigation : public BaseWidget
+	class Navigation : public base::BaseWidget
 	{
 		Q_OBJECT
 	public:

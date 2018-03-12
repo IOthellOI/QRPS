@@ -9,27 +9,21 @@
 /// @date    Mar 12,2018
 //////////////////////////////////////////////////
 #pragma once
-#ifndef ORDINARYBUTTON_H
-#define ORDINARYBUTTON_H
+#ifndef COMPONENTFACTORY_H
+#define COMPONENTFACTORY_H
 
 #include "baseWidget.h"
 
-namespace button
+namespace base
 {
-	class ClickButton : public base::BaseWidget
+	class WidgetFactory : public QObject
 	{
-		Q_OBJECT
 	public:
-		explicit ClickButton(QWidget * _parent = nullptr);
-		virtual ~ClickButton();
+		explicit WidgetFactory() = delete;
 
 	public:
-		virtual void setText(const QString & _text) const;
-
-	private:
-		struct ClickButtonData;
-		ClickButtonData * data;
+		static base::BaseWidget * create(const QString & _type);
 	};
 }
 
-#endif // !ORDINARYBUTTON_H
+#endif // !COMPONENTFACTORY_H

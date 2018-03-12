@@ -6,9 +6,7 @@
 /// @brief   NavigationButton
 /// @version 1.0
 /// @author  Yang Wang
-/// @date    Feb 9,2018
-/// @web     http://iothelloi.sxl.cn/
-/// @git     https://github.com/iothelloi/
+/// @date    Mar 12,2018
 //////////////////////////////////////////////////
 #pragma once
 #ifndef NAVIGATIONBUTTON_H
@@ -16,9 +14,9 @@
 
 #include "baseWidget.h"
 
-namespace ios
+namespace button
 {
-	class NavigationButton : public BaseWidget
+	class NavigationButton : public base::BaseWidget
 	{
 		Q_OBJECT
 	public:

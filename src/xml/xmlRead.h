@@ -6,9 +6,7 @@
 /// @brief   BaseWidget
 /// @version 1.0
 /// @author  Yang Wang
-/// @date    Feb 8,2018
-/// @web     http://iothelloi.sxl.cn/
-/// @git     https://github.com/iothelloi/
+/// @date    Mar 12,2018
 //////////////////////////////////////////////////
 #pragma once
 #ifndef XMLREAD_H
@@ -17,7 +15,7 @@
 #include <QObject>
 #include <QDomDocument>
 
-namespace ios
+namespace xml
 {
 	class XmlRead : public QObject
 	{

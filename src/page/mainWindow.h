@@ -6,9 +6,7 @@
 /// @brief   MainWindow
 /// @version 1.0
 /// @author  Yang Wang
-/// @date    Feb 28,2018
-/// @web     http://iothelloi.sxl.cn/
-/// @git     https://github.com/iothelloi/
+/// @date    Mar 12,2018
 //////////////////////////////////////////////////
 #pragma once
 #ifndef MAINWINDOW_H
@@ -16,9 +14,9 @@
 
 #include "baseWidget.h"
 
-namespace ios
+namespace page
 {
-	class MainWindow : public BaseWidget
+	class MainWindow : public base::BaseWidget
 	{
 		Q_OBJECT
 	public:

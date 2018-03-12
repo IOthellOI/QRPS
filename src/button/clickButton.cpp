@@ -3,13 +3,13 @@
 #include <QPushButton>
 #include <QLayout>
 
-struct ios::ClickButton::ClickButtonData
+struct button::ClickButton::ClickButtonData
 {
 	QPushButton * button;
 	QHBoxLayout * layout;
 };
 
-ios::ClickButton::ClickButton(QWidget * _parent) :
+button::ClickButton::ClickButton(QWidget * _parent) :
 	BaseWidget(_parent),
 	data(new ClickButtonData)
 {
@@ -27,12 +27,12 @@ ios::ClickButton::ClickButton(QWidget * _parent) :
 	connect(data->button, SIGNAL(clicked(bool)), this, SLOT(slotClicked(bool)));
 }
 
-ios::ClickButton::~ClickButton()
+button::ClickButton::~ClickButton()
 {
 	delete data;
 }
 
-void ios::ClickButton::setText(const QString & _text) const
+void button::ClickButton::setText(const QString & _text) const
 {
 	data->button->setText(_text);
 }

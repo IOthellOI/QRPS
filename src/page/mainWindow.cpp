@@ -1,61 +1,46 @@
 #include "mainWindow.h"
 #include "navigation.h"
-#include "quickOperation.h"
-#include "statusMonitor.h"
 #include "mainPage.h"
 
 #include <QLayout>
 
-struct ios::MainWindow::MainWindowData
+struct page::MainWindow::MainWindowData
 {
 	Navigation * navigation;
-	QuickOperation * quickOperation;
-	StatusMonitor * statusMonitor;
 	MainPage * mainPage;
 };
 
-ios::MainWindow::MainWindow(QWidget * _parent):
+page::MainWindow::MainWindow(QWidget * _parent):
 	BaseWidget(_parent),
 	data(new MainWindowData)
 {
 	data->navigation = new Navigation;
-	data->quickOperation = new QuickOperation;
-	data->statusMonitor = new StatusMonitor;
 	data->mainPage = new MainPage;
 
-	data->navigation->loadConfig("./data/config/ui/navigation.xml");
-	data->quickOperation->loadConfig("./data/config/ui/quickOperation.xml");
-	data->statusMonitor->loadConfig("./data/config/ui/statusMonitor.xml");
-	data->mainPage->loadConfig("./data/config/ui/mainPage.xml");
+	data->navigation->loadConfig("./data/page/navigation.xml");
+	data->mainPage->loadConfig("./data/page/mainPage.xml");
 
-	QHBoxLayout * topLayout = new QHBoxLayout;
-	QHBoxLayout * buttomLayout = new QHBoxLayout;
-	QVBoxLayout * mainLayout = new QVBoxLayout;
+	QHBoxLayout * layout = new QHBoxLayout;
 
-	topLayout->setMargin(2);
-	topLayout->setSpacing(2);
-	buttomLayout->setMargin(2);
-	buttomLayout->setSpacing(2);
+	layout->setMargin(2);
+	layout->setSpacing(2);
 
-	topLayout->addWidget(data->navigation);
-	topLayout->addWidget(data->mainPage);
-	buttomLayout->addWidget(data->quickOperation);
-	buttomLayout->addWidget(data->statusMonitor);
+	layout->addWidget(data->navigation);
+	layout->addWidget(data->mainPage);
 
-	mainLayout->addLayout(topLayout);
-	mainLayout->addLayout(buttomLayout);
-	setLayout(mainLayout);
+	setLayout(layout);
 
 	setWindowFlags(Qt::FramelessWindowHint);
-	setFixedHeight(1080);
-	setFixedWidth(1920);
+	setFixedWidth(1280);
+	setFixedHeight(800);
+
 	connect(data->navigation,
 		SIGNAL(signalPageChanged(const QString &)),
 		data->mainPage,
 		SLOT(slotPageChanged(const QString &)));
 }
 
-ios::MainWindow::~MainWindow()
+page::MainWindow::~MainWindow()
 {
 	delete data;
 }

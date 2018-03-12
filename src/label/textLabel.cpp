@@ -3,13 +3,13 @@
 #include <QLayout>
 #include <QLabel>
 
-struct ios::TextLabel::TextLabelData
+struct label::TextLabel::TextLabelData
 {
 	QLabel * label;
 	QHBoxLayout * layout;
 };
 
-ios::TextLabel::TextLabel(QWidget * _parent) :
+label::TextLabel::TextLabel(QWidget * _parent) :
 	BaseWidget(_parent),
 	data(new TextLabelData)
 {
@@ -22,12 +22,12 @@ ios::TextLabel::TextLabel(QWidget * _parent) :
 	setLayout(data->layout);
 }
 
-ios::TextLabel::~TextLabel()
+label::TextLabel::~TextLabel()
 {
 	delete data;
 }
 
-void ios::TextLabel::setText(const QString & _text) const
+void label::TextLabel::setText(const QString & _text) const
 {
 	data->label->setText(_text);
 }

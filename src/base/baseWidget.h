@@ -28,11 +28,13 @@ namespace base
 		virtual ~BaseWidget();
 
 	public:
+		virtual void setTitle(const QString & _text) const;
 		virtual void setText(const QString & _text) const;
 		virtual void setChecked(bool _checked) const;
 		virtual void setState(int _state) const;
 		virtual void setValue(int _value) const;
 		virtual void setValue(double _value) const;
+		virtual void setValue(const QString & _value) const;
 		virtual void setUnit(const QString & _unit) const;
 		virtual void loadConfig(const QString & _path) const;
 		virtual void setImage(const QImage & _image) const;;
@@ -47,6 +49,7 @@ namespace base
 
 	private:
 		int m_ident;
+		QString m_name;
 	};
 }
 

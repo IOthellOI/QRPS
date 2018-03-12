@@ -1,17 +1,16 @@
 #include "navigation.h"
 #include "xmlRead.h"
-#include "componentFactory.h"
 #include "navigationButton.h"
 
 #include <QLayout>
 #include <QVariant>
 
-struct ios::Navigation::NavigationData
+struct page::Navigation::NavigationData
 {
 	QGridLayout * layout;
 };
 
-ios::Navigation::Navigation(QWidget * _parent) :
+page::Navigation::Navigation(QWidget * _parent) :
 	BaseWidget(_parent),
 	data(new NavigationData)
 {
@@ -23,14 +22,14 @@ ios::Navigation::Navigation(QWidget * _parent) :
 	setLayout(data->layout);
 }
 
-ios::Navigation::~Navigation()
+page::Navigation::~Navigation()
 {
 	delete data;
 }
 
-void ios::Navigation::loadConfig(const QString & _path) const
+void page::Navigation::loadConfig(const QString & _path) const
 {
-	XmlRead xmlRead;
+	xml::XmlRead xmlRead;
 	if (!xmlRead.loadFile(_path))
 	{
 		return;
@@ -40,11 +39,11 @@ void ios::Navigation::loadConfig(const QString & _path) const
 
 	QDomElement element = root.firstChildElement();
 	
-	NavigationButton * navigationButton = nullptr;
+	button::NavigationButton * navigationButton = nullptr;
 
 	while (!element.isNull())
 	{
-		navigationButton = new NavigationButton;
+		navigationButton = new button::NavigationButton;
 
 		if (element.hasAttribute("name"))
 		{
@@ -68,7 +67,7 @@ void ios::Navigation::loadConfig(const QString & _path) const
 			navigationButton->setChecked(value.toBool());
 		}
 
-		navigationButton->setBindPage(element.attribute("bindPage"));
+		navigationButton->setBindPage(element.attribute("bind"));
 
 		data->layout->addWidget(navigationButton,
 			element.attribute("row").toInt(),
@@ -85,7 +84,7 @@ void ios::Navigation::loadConfig(const QString & _path) const
 	}
 }
 
-void ios::Navigation::slotPageChanged(const QString & _page)
+void page::Navigation::slotPageChanged(const QString & _page)
 {
 	emit signalPageChanged(_page);
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+  <table name="engine" title="发动机数据" path="./data/table/engine.xml"/>
+  <table name="position" title="位置数据" path="./data/table/position.xml"/>
+  <table name="" bind="" title="发动机数据" path="./data/table/engine.xml"/>
+</group>

@@ -2,25 +2,25 @@
 
 #include <QFile>
 
-struct ios::XmlRead::XmlReadData
+struct xml::XmlRead::XmlReadData
 {
 	QFile * file;
 	QDomDocument * document;
 	QDomElement * element;
 };
 
-ios::XmlRead::XmlRead() : 
+xml::XmlRead::XmlRead() : 
 	data(new XmlReadData)
 {
 	//empty
 }
 
-ios::XmlRead::~XmlRead()
+xml::XmlRead::~XmlRead()
 {
 	delete data;
 }
 
-bool ios::XmlRead::loadFile(const QString & _path)
+bool xml::XmlRead::loadFile(const QString & _path)
 {
 	if (_path.isEmpty())
 	{
@@ -53,7 +53,7 @@ bool ios::XmlRead::loadFile(const QString & _path)
 	return true;
 }
 
-QDomElement ios::XmlRead::rootElement()
+QDomElement xml::XmlRead::rootElement()
 {
 	return *data->element;
 }

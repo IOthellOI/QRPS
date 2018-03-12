@@ -46,6 +46,54 @@
     <Filter Include="Source Files\table">
       <UniqueIdentifier>{6246d554-8607-4db1-ac4f-1a8d81a0f6c4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Config Files">
+      <UniqueIdentifier>{2bfad766-2cad-49ee-8a11-b6b3e4740345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config Files\table">
+      <UniqueIdentifier>{9e561330-be7b-4219-9a5b-b09092a92afb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tree">
+      <UniqueIdentifier>{fb6b889e-d256-4a68-b290-9737bdfae8b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tree">
+      <UniqueIdentifier>{5a68f822-6736-47bd-8dfd-161798436254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config Files\tree">
+      <UniqueIdentifier>{374409ed-a83b-4978-8c3a-80fece8c5a20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\page">
+      <UniqueIdentifier>{5273b58b-294c-48f6-b9ad-7e05ffdc3d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\page">
+      <UniqueIdentifier>{81792181-356d-431c-b06c-01e996d17f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\button">
+      <UniqueIdentifier>{4ae36d6a-1f43-4ce2-a4fb-c5e008b0b062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\button">
+      <UniqueIdentifier>{6558e857-d294-4040-8b39-d4f1e9bdf6ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config Files\page">
+      <UniqueIdentifier>{9579561d-e950-4fdb-9347-665493a98e8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\edit">
+      <UniqueIdentifier>{d7ae463d-e33e-4087-bc4c-46b05bf15f60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\edit">
+      <UniqueIdentifier>{d26ab8b1-0292-4ebd-89ac-44ef91a4b678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\label">
+      <UniqueIdentifier>{7ece0d2f-4b37-4051-9307-30200d67f9a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\label">
+      <UniqueIdentifier>{a4e13215-83d6-4e8f-9b67-49b766a5268b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\slider">
+      <UniqueIdentifier>{61500aa8-3d20-4cb0-9566-c34ac61086b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\slider">
+      <UniqueIdentifier>{7721820c-88e8-4b4e-93a1-bd2551798326}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tmp\moc\moc_baseWidget.cpp">
@@ -66,6 +114,72 @@
     <ClCompile Include="tmp\moc\moc_dataTable.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\tree\dataTree.cpp">
+      <Filter>Source Files\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_dataTree.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\tableGroup.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_tableGroup.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_mainWindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\page\mainWindow.cpp">
+      <Filter>Source Files\page</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_mainPage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_navigation.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\page\mainPage.cpp">
+      <Filter>Source Files\page</Filter>
+    </ClCompile>
+    <ClCompile Include="src\page\navigation.cpp">
+      <Filter>Source Files\page</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_navigationButton.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\navigationButton.cpp">
+      <Filter>Source Files\button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\page\page.cpp">
+      <Filter>Source Files\page</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\widgetFactory.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_clickButton.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\clickButton.cpp">
+      <Filter>Source Files\button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\edit\lineEdit.cpp">
+      <Filter>Source Files\edit</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_lineEdit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_textLabel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\label\textLabel.cpp">
+      <Filter>Source Files\label</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_dataSlider.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slider\dataSlider.cpp">
+      <Filter>Source Files\slider</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\base\baseWidget.h">
@@ -74,10 +188,75 @@
     <CustomBuild Include="src\table\dataTable.h">
       <Filter>Header Files\table</Filter>
     </CustomBuild>
+    <CustomBuild Include="src\tree\dataTree.h">
+      <Filter>Header Files\tree</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\table\tableGroup.h">
+      <Filter>Header Files\table</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\page\mainWindow.h">
+      <Filter>Header Files\page</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\page\mainPage.h">
+      <Filter>Header Files\page</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\page\navigation.h">
+      <Filter>Header Files\page</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\button\navigationButton.h">
+      <Filter>Header Files\button</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\button\clickButton.h">
+      <Filter>Header Files\button</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\edit\lineEdit.h">
+      <Filter>Header Files\edit</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\label\textLabel.h">
+      <Filter>Header Files\label</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\slider\dataSlider.h">
+      <Filter>Header Files\slider</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\xml\xmlRead.h">
       <Filter>Header Files\xml</Filter>
     </ClInclude>
+    <ClInclude Include="src\page\page.h">
+      <Filter>Header Files\page</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\widgetFactory.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="data\table\engine.xml">
+      <Filter>Config Files\table</Filter>
+    </Xml>
+    <Xml Include="data\tree\tree.xml">
+      <Filter>Config Files\tree</Filter>
+    </Xml>
+    <Xml Include="data\page\mainPage.xml">
+      <Filter>Config Files\page</Filter>
+    </Xml>
+    <Xml Include="data\page\navigation.xml">
+      <Filter>Config Files\page</Filter>
+    </Xml>
+    <Xml Include="data\page\parameterMonitor.xml">
+      <Filter>Config Files\page</Filter>
+    </Xml>
+    <Xml Include="data\table\group.xml">
+      <Filter>Config Files\table</Filter>
+    </Xml>
+    <Xml Include="data\table\position.xml">
+      <Filter>Config Files\table</Filter>
+    </Xml>
+    <Xml Include="data\page\curveDisPlay.xml">
+      <Filter>Config Files\page</Filter>
+    </Xml>
+    <Xml Include="data\page\recordReplay.xml">
+      <Filter>Config Files\page</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

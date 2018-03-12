@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mainPage>
+  <page name="parameterMonitor" path="./data/page/parameterMonitor.xml"/>
+  <page name="curveDisPlay" path="./data/page/curveDisPlay.xml"/>
+  <page name="recordReplay" path="./data/page/recordReplay.xml"/>
+</mainPage>

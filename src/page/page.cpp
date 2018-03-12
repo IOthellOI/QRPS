@@ -1,47 +1,41 @@
 #include "page.h"
 #include "xmlRead.h"
-#include "componentFactory.h"
+#include "widgetFactory.h"
+#include "dataTree.h"
+#include "tableGroup.h"
 
 #include <QLayout>
 #include <QGroupBox>
 #include <QVariant>
 
-struct ios::Page::PageData
+struct page::Page::PageData
 {
 	QGridLayout * layout;
-	QGroupBox * box;
 };
 
-ios::Page::Page(QWidget * _parent) :
+page::Page::Page(QWidget * _parent) :
 	BaseWidget(_parent),
 	data(new PageData)
 {
 	data->layout = new QGridLayout;
-	data->box = new QGroupBox;
-	data->box->setLayout(data->layout);
 
-	QVBoxLayout * layout = new QVBoxLayout;
-	layout->addWidget(data->box);
-
-	setLayout(layout);
+	setLayout(data->layout);
 }
 
-ios::Page::~Page()
+page::Page::~Page()
 {
 	delete data;
 }
 
-void ios::Page::loadConfig(const QString & _path) const
+void page::Page::loadConfig(const QString & _path) const
 {
-	XmlRead xmlRead;
+	xml::XmlRead xmlRead;
 	if (!xmlRead.loadFile(_path))
 	{
 		return;
 	}
 
 	QDomElement root = xmlRead.rootElement();
-	QString title = root.attribute("title", "Î´ÃüÃû");
-	data->box->setTitle(title);
 	
 	QDomElement component = root.firstChildElement();
 	QGroupBox * box = nullptr;
@@ -62,9 +56,13 @@ void ios::Page::loadConfig(const QString & _path) const
 			component.attribute("columnSpan").toInt());
 
 		QDomElement element = component.firstChildElement();
+		
+		tree::DataTree * tree = nullptr;
+		table::TableGroup * group = nullptr;
+
 		while (!element.isNull())
 		{
-			widget = ComponentFactory::create(element.attribute("type"));
+			widget = base::WidgetFactory::create(element.attribute("type"));
 
 			if (widget == nullptr)
 			{
@@ -80,25 +78,21 @@ void ios::Page::loadConfig(const QString & _path) const
 			{
 				widget->setFixedHeight(element.attribute("height").toInt());
 			}
+			if (element.hasAttribute("title"))
+			{
+				widget->setTitle(element.attribute("title"));
+			}
 			if (element.hasAttribute("text"))
 			{
 				widget->setText(element.attribute("text"));
 			}
-			if (element.hasAttribute("group"))
-			{
-				widget->setGroup(element.attribute("group").toInt());
-			}
-			if (element.hasAttribute("unit"))
-			{
-				widget->setUnit(element.attribute("unit"));
-			}
 			if (element.hasAttribute("value"))
 			{
-				widget->setValue(element.attribute("value").toDouble());
+				widget->setValue(element.attribute("value"));
 			}
-			if (element.hasAttribute("checked"))
+			if (element.hasAttribute("path"))
 			{
-				widget->setChecked((QVariant(element.attribute("checked"))).toBool());
+				widget->loadConfig(element.attribute("path"));
 			}
 
 			layout->addWidget(widget,
@@ -106,6 +100,21 @@ void ios::Page::loadConfig(const QString & _path) const
 				element.attribute("column").toInt(),
 				element.attribute("rowSpan").toInt(),
 				element.attribute("columnSpan").toInt());
+
+			if (typeid(widget).name() == typeid(tree::DataTree *).name())
+			{
+				tree = reinterpret_cast<tree::DataTree *>(widget);
+			}
+			if (typeid(widget).name() == typeid(table::TableGroup *).name())
+			{
+				group = reinterpret_cast<table::TableGroup *>(widget);
+			}
+			if (tree != nullptr && group != nullptr)
+			{
+				connect(tree, SIGNAL(signalItemChanged(const QString &)),
+					group, SLOT(slotTableChanged(const QString &)));
+			}
+
 			element = element.nextSiblingElement();
 		}
 

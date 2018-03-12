@@ -7,62 +7,59 @@ base::BaseWidget::BaseWidget(QWidget * _parent) :
 	QWidget(_parent)
 {
 	m_ident = -1;
-	setStyleSheet("border-image: url();");
+	m_name = "";
 }
 
 base::BaseWidget::~BaseWidget()
 {
-	//empty
+}
+
+void base::BaseWidget::setTitle(const QString &) const
+{
 }
 
 void base::BaseWidget::setText(const QString &) const
 {
-	//empty
 }
 
 void base::BaseWidget::setChecked(bool) const
 {
-	//empty
 }
 
 void base::BaseWidget::setState(int) const
 {
-	//empty
 }
 
 void base::BaseWidget::setValue(int) const
 {
-	//empty
 }
 
 void base::BaseWidget::setValue(double) const
 {
-	//empty
+}
+
+void base::BaseWidget::setValue(const QString &) const
+{
 }
 
 void base::BaseWidget::setUnit(const QString &) const
 {
-	//empty
 }
 
 void base::BaseWidget::loadConfig(const QString &) const
 {
-	//empty
 }
 
 void base::BaseWidget::setImage(const QImage &) const
 {
-	//empty
 }
 
 void base::BaseWidget::setIcon(const QIcon &) const
 {
-	//empty
 }
 
 void base::BaseWidget::setGroup(int) const
 {
-	//empty
 }
 
 void base::BaseWidget::setIdent(int _ident)
@@ -77,10 +74,10 @@ int base::BaseWidget::ident() const
 
 void base::BaseWidget::setName(const QString & _name)
 {
-	setObjectName(_name);
+	m_name = _name;
 }
 
 const QString & base::BaseWidget::name() const
 {
-	return objectName();
+	return m_name;
 }

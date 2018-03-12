@@ -3,34 +3,43 @@
 /// Copyright (c) 2018 IOThellOI
 /// All rights reserved.
 /// 
-/// @brief   DataTable
+/// @brief   DataTree
 /// @version 1.0
 /// @author  Yang Wang
 /// @date    Mar 12,2018
 //////////////////////////////////////////////////
 #pragma once
-#ifndef DATATABLE_H
-#define DATATABLE_H
+#ifndef DATATREE_H
+#define DATATREE_H
 
 #include "baseWidget.h"
 
-namespace table
+#include <QTreeWidget>
+
+namespace tree
 {
-	class DataTable : public base::BaseWidget
+	class DataTree : public base::BaseWidget
 	{
 		Q_OBJECT
 	public:
-		explicit DataTable(QWidget * _parent = nullptr);
-		virtual ~DataTable();
+		explicit DataTree(QWidget * _parent = nullptr);
+		virtual ~DataTree();
 
 	public:
 		virtual void setTitle(const QString & _text) const;
 		virtual void loadConfig(const QString & _path) const;
 
+	private slots:
+		void slotItemClicked(QTreeWidgetItem * _item, int _column);
+
+	signals:
+		void signalItemChanged(const QString & _item);
+
 	private:
-		struct DataTableData;
-		DataTableData * data;
+		struct DataTreeData;
+		DataTreeData * data;
 	};
 }
 
-#endif // !DATATABLE_H
+#endif // !DATATREE_H
+

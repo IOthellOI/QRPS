@@ -5,12 +5,12 @@
 #include <QStackedWidget>
 #include <QLayout>
 
-struct ios::MainPage::MainPageData
+struct page::MainPage::MainPageData
 {
 	QStackedWidget * page;
 };
 
-ios::MainPage::MainPage(QWidget * _parent):
+page::MainPage::MainPage(QWidget * _parent):
 	BaseWidget(_parent),
 	data(new MainPageData)
 {
@@ -20,14 +20,14 @@ ios::MainPage::MainPage(QWidget * _parent):
 	setLayout(layout);
 }
 
-ios::MainPage::~MainPage()
+page::MainPage::~MainPage()
 {
 	delete data;
 }
 
-void ios::MainPage::loadConfig(const QString & _path) const
+void page::MainPage::loadConfig(const QString & _path) const
 {
-	XmlRead xmlRead;
+	xml::XmlRead xmlRead;
 	if (!xmlRead.loadFile(_path))
 	{
 		return;
@@ -49,7 +49,7 @@ void ios::MainPage::loadConfig(const QString & _path) const
 	}
 }
 
-void ios::MainPage::slotPageChanged(const QString & _page)
+void page::MainPage::slotPageChanged(const QString & _page)
 {
 	for (size_t i = 0; i < data->page->count(); i++)
 	{
