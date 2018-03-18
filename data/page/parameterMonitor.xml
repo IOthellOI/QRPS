@@ -5,7 +5,7 @@
   </component>
   <component row="1" column="0" rowSpan="1" columnSpan="1">
     <node name="" type="TextLabel"   text="记录时长: 未记录"       row="0" column="0" rowSpan="1" columnSpan="1" wdith="100" height="50"/>
-    <node name="" type="lineEdit"    text="名称" value="记录名称1" row="0" column="1" rowSpan="1" columnSpan="2" width="300" height="60"/>
+    <node name="" type="lineEdit"    text="名称" value="记录名称1" row="0" column="1" rowSpan="1" columnSpan="2" width="300" height="50"/>
     <node name="" type="clickButton" text="记录"                   row="0" column="3" rowSpan="1" columnSpan="1" width="100" height="50"/>
     <node name="" type="clickButton" text="暂停"                   row="0" column="4" rowSpan="1" columnSpan="1" width="100" height="50"/>
     <node name="" type="clickButton" text="结束"                   row="0" column="5" rowSpan="1" columnSpan="1" width="100" height="50"/>

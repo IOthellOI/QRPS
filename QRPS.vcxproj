@@ -16,6 +16,7 @@
     <ClCompile Include="src\base\widgetFactory.cpp" />
     <ClCompile Include="src\button\checkBox.cpp" />
     <ClCompile Include="src\button\clickButton.cpp" />
+    <ClCompile Include="src\button\comboBox.cpp" />
     <ClCompile Include="src\button\navigationButton.cpp" />
     <ClCompile Include="src\curve\dataCurve.cpp" />
     <ClCompile Include="src\data\baseData.cpp" />
@@ -52,6 +53,12 @@
     <ClCompile Include="tmp\moc\moc_status.cpp" />
     <ClCompile Include="tmp\moc\moc_tableGroup.cpp" />
     <ClCompile Include="tmp\moc\moc_textLabel.cpp" />
+    <ClCompile Include="tmp\rcc\qrc_QRPS.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\base\baseWidget.h">
@@ -188,6 +195,7 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\tmp\moc\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I." "-I$(QTDIR)\include" "-I.\tmp\moc" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I.\tmp\uic" "-I.\tmp\rcc" "-I$(QTDIR)\include\QtPrintSupport"</Command>
     </CustomBuild>
     <ClInclude Include="src\button\checkBox.h" />
+    <ClInclude Include="src\button\comboBox.h" />
     <ClInclude Include="src\data\baseData.h" />
     <ClInclude Include="src\data\kernelData.h" />
     <ClInclude Include="src\data\logicalData.h" />
@@ -229,12 +237,29 @@
     <Xml Include="data\page\curveDisPlay.xml" />
     <Xml Include="data\page\parameterMonitor.xml" />
     <Xml Include="data\page\mainPage.xml" />
-    <Xml Include="data\page\navigation.xml" />
+    <Xml Include="data\page\navigation.xml">
+      <SubType>Designer</SubType>
+    </Xml>
     <Xml Include="data\page\recordReplay.xml" />
     <Xml Include="data\table\engine.xml" />
     <Xml Include="data\table\group.xml" />
     <Xml Include="data\table\position.xml" />
     <Xml Include="data\tree\tree.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QRPS.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);.\res\img\backGroud\page.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\tmp\rcc\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\tmp\rcc\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);.\res\img\backGroud\page.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\tmp\rcc\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\tmp\rcc\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\styleSheet.css" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>

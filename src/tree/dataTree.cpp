@@ -17,7 +17,7 @@ tree::DataTree::DataTree(QWidget * _parent) :
 	data(new DataTreeData)
 {
 	QVBoxLayout * layout = new QVBoxLayout;
-	layout->setSpacing(0);
+	layout->setMargin(0);
 
 	data->label = new QLabel(tr("数据列表"));
 	data->label->setStyleSheet("border:1px solid #000000;background:rgb(180, 180, 240)");

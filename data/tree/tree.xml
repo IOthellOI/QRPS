@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tree>
-  <oneLevel text="飞机数据">
+  <oneLevel text="座舱设备参数">
+    <twoLevel text="操纵数据"/>
+    <twoLevel text="顶控板数据"/>
+    <twoLevel text="中操台数据"/>
+    <twoLevel text="遮光板数据"/>
+  </oneLevel>
+  <oneLevel text="飞行仿真参数">
     <twoLevel text="发动机数据" bind="engine"/>
     <twoLevel text="位置数据" bind="position"/>
     <twoLevel text="速度数据"/>
@@ -9,21 +15,27 @@
     <twoLevel text="质量数据"/>
     <twoLevel text="进场数据"/>    
   </oneLevel>
-  <oneLevel text="环境数据">
+  <oneLevel text="环境参数">
     <twoLevel text="时间数据"/>
     <twoLevel text="天气数据"/>
     <twoLevel text="风型数据"/>
-    <twoLevel text="跑道数据"/>
+    <twoLevel text="云型数据"/>
+  </oneLevel>
+  <oneLevel text="视景系统">
+    <twoLevel text="状态数据"/>
+    <twoLevel text="眼点数据"/>
   </oneLevel>
   <oneLevel text="航电数据">
     <twoLevel text="指引数据"/>
     <twoLevel text="大气数据"/>
   </oneLevel>
-  <oneLevel text="特情数据">
-    <twoLevel text="特情数据"/>
+  <oneLevel text="音响系统">
+    <twoLevel text="通断数据"/>
+    <twoLevel text="音量数据"/>
   </oneLevel>
-  <oneLevel text="接口数据">
-    <twoLevel text="电气数据"/>
-    <twoLevel text="电源数据"/>
+  <oneLevel text="教员台指令">
+    <twoLevel text="控制数据"/>
+    <twoLevel text="特情数据"/>
+    <twoLevel text="复位数据"/>
   </oneLevel>
 </tree>

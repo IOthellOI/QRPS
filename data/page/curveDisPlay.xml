@@ -12,4 +12,13 @@
   <component row="1" column="1" rowSpan="1" columnSpan="1">
     <node name="" type="dataCurve" row="0" column="0" rowSpan="1" columnSpan="1" />
   </component>
+  <component row="2" column="0" rowSpan="1" columnSpan="2">
+    <node name="" type="comboBox"    text="表格" value="表格" row="0" column="0" rowSpan="1" columnSpan="1" width="230" height="50"/>
+    <node name="" type="comboBox"    text="X轴"  value="数据" row="0" column="1" rowSpan="1" columnSpan="1" width="230" height="50"/>
+    <node name="" type="comboBox"    text="Y轴"  value="数据" row="0" column="2" rowSpan="1" columnSpan="1" width="230" height="50"/>
+    <node name="" type="clickButton" text="绘制" row="0" column="3" rowSpan="1" columnSpan="1" width="100" height="50"/>
+    <node name="" type="clickButton" text="暂停" row="0" column="4" rowSpan="1" columnSpan="1" width="100" height="50"/>
+    <node name="" type="clickButton" text="清除" row="0" column="5" rowSpan="1" columnSpan="1" width="100" height="50"/>
+    <node name="" type="clickButton" text="快照" row="0" column="6" rowSpan="1" columnSpan="1" width="100" height="50"/>
+  </component>
 </page>

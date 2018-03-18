@@ -19,7 +19,7 @@ table::DataTable::DataTable(QWidget * _parent):
 	data(new DataTableData)
 {
 	QVBoxLayout * layout = new QVBoxLayout;
-	layout->setSpacing(0);
+	layout->setMargin(0);
 
 	setMinimumHeight(700);
 
@@ -27,12 +27,12 @@ table::DataTable::DataTable(QWidget * _parent):
 	data->table->setFrameShape(QFrame::NoFrame);
 	data->table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 	data->table->setSelectionBehavior(QAbstractItemView::SelectRows);
-	data->table->setColumnCount(8);
+	data->table->setColumnCount(7);
 
 	QStringList header;
 	header << tr("数据名称") << tr("变量名称") 
 		<< tr("数据类型") << tr("数据值") << tr("数据单位")
-		<< tr("数据地址") << tr("数据范围") << tr("是否记录");
+		<< tr("数据地址") << tr("数据范围");
 	data->table->setHorizontalHeaderLabels(header);
 
 	data->label = new QLabel(QString(tr("未命名")));
@@ -106,17 +106,6 @@ void table::DataTable::loadConfig(const QString & _path) const
 		item->setTextAlignment(Qt::AlignCenter);
 		data->table->setItem(row, column++, item);		
 		
-		QWidget * widget = new QWidget;
-		QHBoxLayout * layout = new QHBoxLayout;
-		box = new QCheckBox;
-		box->setChecked(QVariant(element.attribute("checked")).toBool());
-		layout->addWidget(box);
-		layout->setAlignment(Qt::AlignCenter);
-		layout->setMargin(0);
-		widget->setLayout(layout);
-
-		data->table->setCellWidget(row, column, widget);
-
 		row++;
 		column = 0;
 		element = element.nextSiblingElement();

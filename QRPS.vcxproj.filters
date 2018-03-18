@@ -240,6 +240,12 @@
     <ClCompile Include="src\page\status.cpp">
       <Filter>Source Files\page</Filter>
     </ClCompile>
+    <ClCompile Include="tmp\rcc\qrc_QRPS.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\comboBox.cpp">
+      <Filter>Source Files\button</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\base\baseWidget.h">
@@ -290,6 +296,9 @@
     <CustomBuild Include="src\page\status.h">
       <Filter>Header Files\page</Filter>
     </CustomBuild>
+    <CustomBuild Include="QRPS.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\xml\xmlRead.h">
@@ -314,6 +323,9 @@
       <Filter>Header Files\group</Filter>
     </ClInclude>
     <ClInclude Include="src\button\checkBox.h">
+      <Filter>Header Files\button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\button\comboBox.h">
       <Filter>Header Files\button</Filter>
     </ClInclude>
   </ItemGroup>
@@ -345,5 +357,8 @@
     <Xml Include="data\page\recordReplay.xml">
       <Filter>Config Files\page</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\styleSheet.css" />
   </ItemGroup>
 </Project>

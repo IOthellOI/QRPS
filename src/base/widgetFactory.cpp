@@ -9,6 +9,7 @@
 #include "treeTable.h"
 #include "fileTable.h"
 #include "checkBox.h"
+#include "comboBox.h"
 
 base::BaseWidget * base::WidgetFactory::create(const QString & _type)
 {
@@ -43,6 +44,10 @@ base::BaseWidget * base::WidgetFactory::create(const QString & _type)
 	else if (_type.toUpper() == "CHECKBOX")
 	{
 		return new button::CheckBox;
+	}
+	else if (_type.toUpper() == "COMBOBOX")
+	{
+		return new button::ComboBox;
 	}
 	else
 	{
