@@ -6,23 +6,25 @@
 /// @brief   KernelData
 /// @version 1.0
 /// @author  Yang Wang
-/// @date    Mar 6,2018
-/// @web     http://iothelloi.sxl.cn/
-/// @git     https://github.com/iothelloi/
+/// @date    Mar 13,2018
 //////////////////////////////////////////////////
 #pragma once
 #ifndef KERNELDATA_H
 #define KERNELDATA_H
 
-#include "b"
+#include <QObject>
 
-namespace ios
+namespace data
 {
-	class KernelData
+	class KernelData : public QObject
 	{
 	public:
-		KernelData();
-		~KernelData();
+		explicit KernelData();
+		virtual ~KernelData();
+
+	private:
+		struct KernelDataData;
+		KernelDataData * data;
 	};
 }
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <table>
-  <item dataName="数据1" variableName="data1" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
-  <item dataName="数据2" variableName="data2" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
-  <item dataName="数据3" variableName="data3" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
-  <item dataName="数据4" variableName="data4" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
-  <item dataName="数据5" variableName="data5" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
-  <item dataName="数据6" variableName="data6" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
-  <item dataName="数据7" variableName="data7" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
-  <item dataName="数据8" variableName="data8" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
-  <item dataName="数据9" variableName="data9" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300"/>
+  <item dataName="数据1" variableName="data1" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
+  <item dataName="数据2" variableName="data2" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
+  <item dataName="数据3" variableName="data3" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
+  <item dataName="数据4" variableName="data4" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
+  <item dataName="数据5" variableName="data5" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
+  <item dataName="数据6" variableName="data6" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
+  <item dataName="数据7" variableName="data7" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
+  <item dataName="数据8" variableName="data8" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
+  <item dataName="数据9" variableName="data9" dataType="double" dataValue="123.45" dataUnit="米/秒" dataAddress="0x00052000" dataRange="100~300" checked="true"/>
 </table>

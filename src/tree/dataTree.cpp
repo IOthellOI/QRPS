@@ -17,9 +17,10 @@ tree::DataTree::DataTree(QWidget * _parent) :
 	data(new DataTreeData)
 {
 	QVBoxLayout * layout = new QVBoxLayout;
-	layout->setSpacing(10);
+	layout->setSpacing(0);
 
-	data->label = new QLabel(tr("未命名"));
+	data->label = new QLabel(tr("数据列表"));
+	data->label->setStyleSheet("border:1px solid #000000;background:rgb(180, 180, 240)");
 	data->label->setFixedHeight(20);
 	data->label->setAlignment(Qt::AlignCenter);
 

@@ -103,6 +103,18 @@
     <Filter Include="Reference File">
       <UniqueIdentifier>{cfdfae17-3503-4b21-9cd5-b2da1a60649e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\data">
+      <UniqueIdentifier>{243b813e-b7e6-4cbc-a83a-3ab81fd6aecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\data">
+      <UniqueIdentifier>{41359bab-74c5-49a0-8544-66a163dba85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\group">
+      <UniqueIdentifier>{7dac43b7-5d9d-42e2-bba5-2d5d836f562c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\group">
+      <UniqueIdentifier>{572b045b-6609-40c4-bd2e-ba9662b8ea31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tmp\moc\moc_baseWidget.cpp">
@@ -201,6 +213,33 @@
     <ClCompile Include="inc\qcustomplot.cpp">
       <Filter>Reference File</Filter>
     </ClCompile>
+    <ClCompile Include="src\data\kernelData.cpp">
+      <Filter>Source Files\data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data\logicalData.cpp">
+      <Filter>Source Files\data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data\baseData.cpp">
+      <Filter>Source Files\data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\group\treeTable.cpp">
+      <Filter>Source Files\group</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_fileTable.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table\fileTable.cpp">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\checkBox.cpp">
+      <Filter>Source Files\button</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp\moc\moc_status.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\page\status.cpp">
+      <Filter>Source Files\page</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\base\baseWidget.h">
@@ -245,6 +284,12 @@
     <CustomBuild Include="inc\qcustomplot.h">
       <Filter>Reference File</Filter>
     </CustomBuild>
+    <CustomBuild Include="src\table\fileTable.h">
+      <Filter>Header Files\table</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\page\status.h">
+      <Filter>Header Files\page</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\xml\xmlRead.h">
@@ -255,6 +300,21 @@
     </ClInclude>
     <ClInclude Include="src\base\widgetFactory.h">
       <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\kernelData.h">
+      <Filter>Header Files\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\logicalData.h">
+      <Filter>Header Files\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\baseData.h">
+      <Filter>Header Files\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\group\treeTable.h">
+      <Filter>Header Files\group</Filter>
+    </ClInclude>
+    <ClInclude Include="src\button\checkBox.h">
+      <Filter>Header Files\button</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
