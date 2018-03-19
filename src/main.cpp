@@ -14,13 +14,13 @@ int main(int argc, char * argv[])
 	w.setWindowTitle("记录回放系统软件");
 	w.show();
 
-	//QFile file("./res/styleSheet.css");
-	//if (file.open(QFile::ReadOnly))
-	//{
-	//	QString qss = QLatin1String(file.readAll());
-	//	qApp->setStyleSheet(qss);
-	//	file.close();
-	//}
+	QFile file("./res/qss/psblack.css");
+	if (file.open(QFile::ReadOnly))
+	{
+		QString qss = QLatin1String(file.readAll());
+		qApp->setStyleSheet(qss);
+		file.close();
+	}
 	
 	return a.exec();
 }
