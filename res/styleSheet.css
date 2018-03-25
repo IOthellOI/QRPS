@@ -1,16 +1,16 @@
-QPushButton {
+QToolButton#NavigationButton {
     border: none;
     border-radius: 10px;
 }
 
-    QPushButton:enabled {
+    QToolButton#NavigationButton:enabled {
         background: rgb(80, 80, 80);
     }
 
-    QPushButton:hover {
+    QToolButton#NavigationButton:hover {
         background: rgb(100, 100, 100);
     }
 
-    QPushButton:checked {
+    QToolButton#NavigationButton:checked {
         background: rgb(150, 150, 150);
     }
