@@ -20,6 +20,7 @@ button::NavigationButton::NavigationButton(QWidget * _parent) :
 	data(new NavigationButtonData)
 {
 	data->button = new QToolButton;
+	data->button->setObjectName("NavigationButton");
 	QSizePolicy sizePolicy = data->button->sizePolicy();
 	sizePolicy.setHorizontalPolicy(QSizePolicy::Expanding);
 	sizePolicy.setVerticalPolicy(QSizePolicy::Expanding);

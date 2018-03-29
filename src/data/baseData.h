@@ -9,24 +9,21 @@
 /// @date    Mar 13,2018
 //////////////////////////////////////////////////
 #pragma once
-#ifndef KERNELDATA_H
-#define KERNELDATA_H
-
-#include <QObject>
+#ifndef BASEDATA_H
+#define BASEDATA_H
 
 namespace data
 {
-	class KernelData : public QObject
+	class BaseData
 	{
 	public:
-		explicit KernelData();
-		virtual ~KernelData();
+		explicit BaseData();
+		virtual ~BaseData();
 
 	private:
-		struct KernelDataData;
-		KernelDataData * data;
+		int m_id;
 	};
 }
 
-#endif // !KERNELDATA_H
+#endif // !BASEDATA_H
 

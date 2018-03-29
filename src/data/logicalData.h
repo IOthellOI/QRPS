@@ -3,30 +3,30 @@
 /// Copyright (c) 2018 IOThellOI
 /// All rights reserved.
 /// 
-/// @brief   KernelData
+/// @brief   LogicalData
 /// @version 1.0
 /// @author  Yang Wang
 /// @date    Mar 13,2018
 //////////////////////////////////////////////////
 #pragma once
-#ifndef KERNELDATA_H
-#define KERNELDATA_H
+#ifndef LOGICALDATA_H
+#define LOGICALDATA_H
 
 #include <QObject>
 
 namespace data
 {
-	class KernelData : public QObject
+	class LogicalData : public QObject
 	{
 	public:
-		explicit KernelData();
-		virtual ~KernelData();
+		explicit LogicalData();
+		virtual ~LogicalData();
 
 	private:
-		struct KernelDataData;
-		KernelDataData * data;
+		struct LogicalDataData;
+		LogicalDataData * data;
 	};
 }
 
-#endif // !KERNELDATA_H
+#endif // !LOGICALDATA_H
 

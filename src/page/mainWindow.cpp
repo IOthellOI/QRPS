@@ -1,6 +1,7 @@
 #include "mainWindow.h"
 #include "navigation.h"
 #include "mainPage.h"
+#include "status.h"
 
 #include <QLayout>
 
@@ -8,6 +9,7 @@ struct page::MainWindow::MainWindowData
 {
 	Navigation * navigation;
 	MainPage * mainPage;
+	Status * status;
 };
 
 page::MainWindow::MainWindow(QWidget * _parent):
@@ -16,10 +18,12 @@ page::MainWindow::MainWindow(QWidget * _parent):
 {
 	data->navigation = new Navigation;
 	data->mainPage = new MainPage;
+	data->status = new Status;
 
 	data->navigation->loadConfig("./data/page/navigation.xml");
 	data->mainPage->loadConfig("./data/page/mainPage.xml");
 
+	QVBoxLayout * vlayout = new QVBoxLayout;
 	QHBoxLayout * layout = new QHBoxLayout;
 
 	layout->setMargin(2);
@@ -28,11 +32,14 @@ page::MainWindow::MainWindow(QWidget * _parent):
 	layout->addWidget(data->navigation);
 	layout->addWidget(data->mainPage);
 
-	setLayout(layout);
+	vlayout->addLayout(layout);
+	vlayout->addWidget(data->status);
 
-	setWindowFlags(Qt::FramelessWindowHint);
-	setFixedWidth(1280);
-	setFixedHeight(800);
+	setLayout(vlayout);
+
+	//setWindowFlags(Qt::FramelessWindowHint);
+	setFixedWidth(1440);
+	setFixedHeight(900);
 
 	connect(data->navigation,
 		SIGNAL(signalPageChanged(const QString &)),

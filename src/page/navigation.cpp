@@ -18,7 +18,7 @@ page::Navigation::Navigation(QWidget * _parent) :
 	setMinimumWidth(200);
 	data->layout = new QGridLayout;
 	data->layout->setAlignment(Qt::AlignLeft | Qt::AlignTop);
-	data->layout->setSpacing(0);
+	data->layout->setSpacing(20);
 	setLayout(data->layout);
 }
 

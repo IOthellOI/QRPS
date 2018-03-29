@@ -5,6 +5,8 @@
 #include <QHeaderView>
 #include <QLayout>
 #include <QLabel>
+#include <QCheckBox>
+#include <QVariant>
 
 struct table::DataTable::DataTableData
 {
@@ -17,11 +19,14 @@ table::DataTable::DataTable(QWidget * _parent):
 	data(new DataTableData)
 {
 	QVBoxLayout * layout = new QVBoxLayout;
-	layout->setSpacing(10);
+	layout->setMargin(0);
+
+	setMinimumHeight(700);
 
 	data->table = new QTableWidget;
 	data->table->setFrameShape(QFrame::NoFrame);
 	data->table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+	data->table->setSelectionBehavior(QAbstractItemView::SelectRows);
 	data->table->setColumnCount(7);
 
 	QStringList header;
@@ -32,6 +37,7 @@ table::DataTable::DataTable(QWidget * _parent):
 
 	data->label = new QLabel(QString(tr("Î´ÃüÃû")));
 	data->label->setFixedHeight(20);
+	data->label->setStyleSheet("border:1px solid #000000;background:rgb(180, 180, 240)");
 	data->label->setAlignment(Qt::AlignCenter);
 
 	layout->addWidget(data->label);
@@ -64,6 +70,7 @@ void table::DataTable::loadConfig(const QString & _path) const
 	QDomElement element = root.firstChildElement();
 
 	QTableWidgetItem * item = nullptr;
+	QCheckBox * box = nullptr;
 
 	int row = 0;
 	int column = 0;
@@ -97,7 +104,7 @@ void table::DataTable::loadConfig(const QString & _path) const
 
 		item = new QTableWidgetItem(element.attribute("dataRange", tr("Î´¶¨Òå")));
 		item->setTextAlignment(Qt::AlignCenter);
-		data->table->setItem(row, column++, item);
+		data->table->setItem(row, column++, item);		
 		
 		row++;
 		column = 0;
