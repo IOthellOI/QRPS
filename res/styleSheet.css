@@ -1,4 +1,4 @@
-QToolButton#NavigationButton {
+/*QToolButton#NavigationButton {
     border: none;
     border-radius: 10px;
 }
@@ -13,4 +13,4 @@ QToolButton#NavigationButton {
 
     QToolButton#NavigationButton:checked {
         background: rgb(150, 150, 150);
-    }
+    }*/

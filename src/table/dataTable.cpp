@@ -27,12 +27,11 @@ table::DataTable::DataTable(QWidget * _parent):
 	data->table->setFrameShape(QFrame::NoFrame);
 	data->table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 	data->table->setSelectionBehavior(QAbstractItemView::SelectRows);
-	data->table->setColumnCount(7);
+	data->table->setColumnCount(4);
 
 	QStringList header;
-	header << tr("数据名称") << tr("变量名称") 
-		<< tr("数据类型") << tr("数据值") << tr("数据单位")
-		<< tr("数据地址") << tr("数据范围");
+	header << tr("数据名称")
+		<< tr("数据类型") << tr("数据值") << tr("数据单位");
 	data->table->setHorizontalHeaderLabels(header);
 
 	data->label = new QLabel(QString(tr("未命名")));
@@ -82,9 +81,9 @@ void table::DataTable::loadConfig(const QString & _path) const
 		item->setTextAlignment(Qt::AlignCenter);
 		data->table->setItem(row, column++, item);
 
-		item = new QTableWidgetItem(element.attribute("variableName", tr("未定义")));
-		item->setTextAlignment(Qt::AlignCenter);
-		data->table->setItem(row, column++, item);
+		//item = new QTableWidgetItem(element.attribute("variableName", tr("未定义")));
+		//item->setTextAlignment(Qt::AlignCenter);
+		//data->table->setItem(row, column++, item);
 
 		item = new QTableWidgetItem(element.attribute("dataType", tr("未定义")));
 		item->setTextAlignment(Qt::AlignCenter);
@@ -98,13 +97,13 @@ void table::DataTable::loadConfig(const QString & _path) const
 		item->setTextAlignment(Qt::AlignCenter);
 		data->table->setItem(row, column++, item);
 
-		item = new QTableWidgetItem(element.attribute("dataAddress", tr("未定义")));
-		item->setTextAlignment(Qt::AlignCenter);
-		data->table->setItem(row, column++, item);
+		//item = new QTableWidgetItem(element.attribute("dataAddress", tr("未定义")));
+		//item->setTextAlignment(Qt::AlignCenter);
+		//data->table->setItem(row, column++, item);
 
-		item = new QTableWidgetItem(element.attribute("dataRange", tr("未定义")));
-		item->setTextAlignment(Qt::AlignCenter);
-		data->table->setItem(row, column++, item);		
+		//item = new QTableWidgetItem(element.attribute("dataRange", tr("未定义")));
+		//item->setTextAlignment(Qt::AlignCenter);
+		//data->table->setItem(row, column++, item);		
 		
 		row++;
 		column = 0;
