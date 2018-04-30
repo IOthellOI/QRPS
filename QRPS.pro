@@ -3,11 +3,11 @@
 # ------------------------------------------------------
 
 TEMPLATE = app
-TARGET = QIOS
+TARGET = QRPS
 DESTDIR = ./bin/x64/Debug
-QT += core xml sql network gui widgets
+QT += core xml sql network gui widgets printsupport
 CONFIG += debug
-DEFINES += _UNICODE WIN64 QT_DLL QT_NETWORK_LIB QT_SQL_LIB QT_WIDGETS_LIB QT_XML_LIB
+DEFINES += _UNICODE WIN64 QT_DLL QT_NETWORK_LIB QT_SQL_LIB QT_WIDGETS_LIB QT_XML_LIB QT_PRINTSUPPORT_LIB
 INCLUDEPATH += . \
     ./tmp/moc \
     ./tmp/uic \
@@ -17,4 +17,4 @@ MOC_DIR += ./tmp/moc
 OBJECTS_DIR += debug
 UI_DIR += ./tmp/uic
 RCC_DIR += ./tmp/rcc
-include(QIOS.pri)
+include(QRPS.pri)

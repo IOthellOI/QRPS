@@ -7,51 +7,55 @@
 message("You are running qmake on a generated .pro file. This may not work!")
 
 
-HEADERS += ./kernelData.h \
-    ./src/componentFactory.h \
-    ./src/entryBar.h \
-    ./src/page.h \
-    ./src/xmlRead.h \
-    ./src/baseWidget.h \
-    ./src/clickButton.h \
-    ./src/toggleButton.h \
-    ./src/mutexButton.h \
-    ./src/navigationButton.h \
-    ./src/textLabel.h \
-    ./src/indicationLabel.h \
-    ./src/dataSlider.h \
-    ./src/dataLabel.h \
-    ./src/progressBar.h \
-    ./src/dataButton.h \
-    ./src/mainWindow.h \
-    ./src/mainPage.h \
-    ./src/navigation.h \
-    ./src/quickOperation.h \
-    ./src/statusMonitor.h \
-    ./src/inputPage.h \
-    ./src/powerControl.h
-SOURCES += ./kernelData.cpp \
-    ./src/baseWidget.cpp \
-    ./src/componentFactory.cpp \
-    ./src/dataButton.cpp \
-    ./src/dataLabel.cpp \
-    ./src/dataSlider.cpp \
-    ./src/entryBar.cpp \
-    ./src/indicationLabel.cpp \
-    ./src/inputPage.cpp \
-    ./src/main.cpp \
-    ./src/clickButton.cpp \
-    ./src/mainPage.cpp \
-    ./src/mainWindow.cpp \
-    ./src/mutexButton.cpp \
-    ./src/navigationButton.cpp \
-    ./src/navigation.cpp \
-    ./src/page.cpp \
-    ./src/powerControl.cpp \
-    ./src/progressBar.cpp \
-    ./src/quickOperation.cpp \
-    ./src/statusMonitor.cpp \
-    ./src/textLabel.cpp \
-    ./src/toggleButton.cpp \
-    ./src/xmlRead.cpp
-RESOURCES += QIOS.qrc
+HEADERS += ./src/base/widgetFactory.h \
+    ./src/base/baseWidget.h \
+    ./src/xml/xmlRead.h \
+    ./src/table/tableGroup.h \
+    ./src/table/dataTable.h \
+    ./src/table/fileTable.h \
+    ./src/tree/dataTree.h \
+    ./src/page/page.h \
+    ./src/page/mainWindow.h \
+    ./src/page/mainPage.h \
+    ./src/page/navigation.h \
+    ./src/page/status.h \
+    ./src/button/checkBox.h \
+    ./src/button/comboBox.h \
+    ./src/button/navigationButton.h \
+    ./src/button/clickButton.h \
+    ./src/edit/lineEdit.h \
+    ./src/label/textLabel.h \
+    ./src/slider/dataSlider.h \
+    ./src/curve/dataCurve.h \
+    ./src/data/baseData.h \
+    ./src/data/kernelData.h \
+    ./src/data/logicalData.h \
+    ./src/group/treeTable.h \
+    ./inc/qcustomplot.h
+SOURCES += ./src/main.cpp \
+    ./src/base/baseWidget.cpp \
+    ./src/base/widgetFactory.cpp \
+    ./src/xml/xmlRead.cpp \
+    ./src/table/dataTable.cpp \
+    ./src/table/fileTable.cpp \
+    ./src/table/tableGroup.cpp \
+    ./src/tree/dataTree.cpp \
+    ./src/page/mainPage.cpp \
+    ./src/page/mainWindow.cpp \
+    ./src/page/navigation.cpp \
+    ./src/page/page.cpp \
+    ./src/page/status.cpp \
+    ./src/button/checkBox.cpp \
+    ./src/button/clickButton.cpp \
+    ./src/button/comboBox.cpp \
+    ./src/button/navigationButton.cpp \
+    ./src/edit/lineEdit.cpp \
+    ./src/label/textLabel.cpp \
+    ./src/slider/dataSlider.cpp \
+    ./src/curve/dataCurve.cpp \
+    ./src/data/baseData.cpp \
+    ./src/data/kernelData.cpp \
+    ./src/data/logicalData.cpp \
+    ./src/group/treeTable.cpp \
+    ./inc/qcustomplot.cpp
+RESOURCES += QRPS.qrc
